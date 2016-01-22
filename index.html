@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+<!--   ***   Minute Counter - Pomodoro   ***   -->
+<div id="pomTime">
+  <h2>Pomodoro</h2>
+  <i id="pomUp" class="fa fa-chevron-up"></i>
+  <h3 id="pomodoroMin">25</h3>
+  <i id="pomDown" class="fa fa-chevron-down"></i>
+</div>
+
+
+<!--   ***   Minute Counter - Break   ***   -->
+<div id="brkTime">
+  <h2>Break</h2>
+  <i id="brkUp" class="fa fa-chevron-up"></i>
+  <h3 id="breakMin">5</h3>
+  <i id="brkDown" class="fa fa-chevron-down"></i>
+</div>
+
+
+<!--   ***   Clock   ***   -->
+<div id="domClock">
+  <div class="timez">
+    <h2 class="clock" id="minutes">25</h2>
+    <h2 class="clock">:</h2>
+    <h2 class="clock" id="seconds">00</h2>
+  </div>
+</div>
+
+
+<!--   ***   Controls   ***   -->
+<div class="controls">
+  <button id="start">START</button>
+  <button id="resume">RESUME</button>
+  <button id="reset">RESET</button>
+  <button id="pause">PAUSE</button>
+</div>
+
+
+<script type="text/javascript" src="js/clock.js"></script>
+
+</body>
+</html>

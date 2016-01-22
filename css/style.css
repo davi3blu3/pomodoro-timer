@@ -1,0 +1,58 @@
+body {
+  background: #888;
+  text-align: center;
+  color: white;
+}
+
+button {
+  padding: 15px;
+  font-size: 20px;
+}
+
+#pomTime {
+  float: left;
+  margin-left: 20px;
+}
+
+#brkTime {
+  float: right;
+  margin-right: 20px;
+}
+
+#domClock {
+  margin: 0 auto;
+  font-size: 30px;
+  background: #333;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.timez {
+  position: relative;
+  top: 41%;
+}
+
+.clock {
+  display: inline;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+#start {
+  display: inline;
+}
+
+#resume {
+  display: none;
+}
+
+#reset {
+  display: none;
+}
+
+#pause {
+  display: none;
+}
