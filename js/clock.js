@@ -26,7 +26,7 @@ pause.addEventListener("click", pauseTimer);
 
 
 // ** REGISTER TIME SELECT BUTTONS
-var pomUp = document.getElementById('pomUp');
+var pomUp = document.getElementById('pomUp');       // changing this little bit here, yo
 pomUp.addEventListener("click", pomValUp);
 
 var pomDown = document.getElementById('pomDown');
@@ -80,7 +80,7 @@ function resetTimer() {
 
 function pauseTimer() {
   clearInterval(countdownId);
-  running = false;
+  running = true;
 
   // Change buttons displayed
   start.style.display = "none";
@@ -141,3 +141,5 @@ function brkValDown() {
   newBrkMin--;
   brkMin.innerHTML = newBrkMin;
 }
+
+
