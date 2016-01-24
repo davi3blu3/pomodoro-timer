@@ -70,6 +70,7 @@ function resetTimer() {
   dispSec = workTimeSec - (dispMin * 60);
   minField.innerHTML = dispMin;
   secField.innerHTML = (dispSec < 10 ? '0' : '') + dispSec;;
+  running = false;
 
   // Change buttons displayed
   start.style.display = "inline";
