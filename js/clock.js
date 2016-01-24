@@ -1,6 +1,8 @@
 // ** DECLARE VARIABLES
 var workTimeMin = 0;
 var workTimeSec = 0;
+var breakTimeMin = 0;
+var breakTimeSec = 0;
 var dispMin = 0;
 var dispSec = 0;
 var minField = document.getElementById('minutes');
@@ -98,6 +100,24 @@ function counter() {
   secField.innerHTML = (dispSec < 10 ? '0' : '') + dispSec;;
   if (workTimeSec === 0) {
     console.log("Time's Up!");
+    alarm.play();
+    clearInterval(countdownId);
+    // Change buttons displayed -- ** -- SWITCH TO BREAK CLOCK ONCE BUILT
+    breakTimeMin = document.getElementById('breakMin').textContent;
+    breakTimeSec = breakTimeMin * 60;
+    countdownId = setInterval("breakCounter()", 1000);
+    running = true;
+  }
+}
+
+function breakCounter() {
+  breakTimeSec--;                           // new var
+  dispMin = Math.floor(breakTimeSec / 60);
+  dispSec = breakTimeSec - (dispMin * 60);
+  minField.innerHTML = dispMin;
+  secField.innerHTML = (dispSec < 10 ? '0' : '') + dispSec;;
+  if (breakTimeSec === 0) {
+    console.log("Break's Over!");
     alarm.play();
     clearInterval(countdownId);
     // Change buttons displayed -- ** -- SWITCH TO BREAK CLOCK ONCE BUILT
