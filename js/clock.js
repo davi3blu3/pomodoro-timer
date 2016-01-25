@@ -102,7 +102,7 @@ function counter() {
     console.log("Time's Up!");
     alarm.play();
     clearInterval(countdownId);
-    // Change buttons displayed -- ** -- SWITCH TO BREAK CLOCK ONCE BUILT
+    // SWITCH TO BREAK CLOCK
     breakTimeMin = document.getElementById('breakMin').textContent;
     breakTimeSec = breakTimeMin * 60;
     countdownId = setInterval("breakCounter()", 1000);
@@ -111,7 +111,7 @@ function counter() {
 }
 
 function breakCounter() {
-  breakTimeSec--;                           // new var
+  breakTimeSec--;
   dispMin = Math.floor(breakTimeSec / 60);
   dispSec = breakTimeSec - (dispMin * 60);
   minField.innerHTML = dispMin;
@@ -120,11 +120,11 @@ function breakCounter() {
     console.log("Break's Over!");
     alarm.play();
     clearInterval(countdownId);
-    // Change buttons displayed -- ** -- SWITCH TO BREAK CLOCK ONCE BUILT
-    start.style.display = "none";
-    pause.style.display = "none";
-    reset.style.display = "inline";
-    resume.style.display = "inline";
+    // SWITCH TO WORK CLOCK
+    workTimeMin = document.getElementById('pomodoroMin').textContent;
+    workTimeSec = workTimeMin * 60;
+    countdownId = setInterval("counter()", 1000);
+    running = true;
   }
 }
 
