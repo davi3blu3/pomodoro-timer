@@ -152,15 +152,19 @@ function pomValDown() {
 function brkValUp() {
   var brkMin = document.getElementById('breakMin');
   var newBrkMin = document.getElementById('breakMin').textContent;
-  newBrkMin++;
-  brkMin.innerHTML = newBrkMin;
+  if (running === false && newBrkMin < 99){
+      newBrkMin++;
+      brkMin.innerHTML = newBrkMin;
+  }
 }
 
 function brkValDown() {
   var brkMin = document.getElementById('breakMin');
   var newBrkMin = document.getElementById('breakMin').textContent;
-  newBrkMin--;
-  brkMin.innerHTML = newBrkMin;
+  if (running === false && newBrkMin < 99){
+    newBrkMin--;
+    brkMin.innerHTML = newBrkMin;
+  }
 }
 
 
