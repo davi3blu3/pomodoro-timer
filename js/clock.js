@@ -161,7 +161,7 @@ function brkValUp() {
 function brkValDown() {
   var brkMin = document.getElementById('breakMin');
   var newBrkMin = document.getElementById('breakMin').textContent;
-  if (running === false && newBrkMin < 99){
+  if (running === false && newBrkMin > 1){
     newBrkMin--;
     brkMin.innerHTML = newBrkMin;
   }
