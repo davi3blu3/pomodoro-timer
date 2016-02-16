@@ -9,11 +9,11 @@
 <body>
 
 
-<h1 id="title">POMODORO TIMER</h1>
+<h1>POMODORO TIMER</h1>
 
 
 <!--   ***   Minute Counter - Work Clock   *** -->
-<div class="minCounter">
+<!--div class="minCounter">
   <h2>WORK</h2>
   <div class="minuteBG">
     <h3 id="pomodoroMin">25</h3>
@@ -23,11 +23,11 @@
     <button class="arrows" id="pomUp"><i class="fa fa-chevron-up"></i></button>
     <button class="arrows" id="pomDown"><i class="fa fa-chevron-down"></i></button>
   </div>
-</div>
+</div-->
 
 
 <!--   ***   Minute Counter - Break Clock   ***   -->
-<div class="minCounter">
+<!--div class="minCounter">
   <h2>BREAK</h2>
   <div class="minuteBG">
     <h3 id="breakMin">5</h3>
@@ -37,20 +37,24 @@
     <button class="arrows" id="brkUp"><i class="fa fa-chevron-up"></i></button>
     <button class="arrows" id="brkDown"><i class="fa fa-chevron-down"></i></button>
   </div>
-</div>
+</div-->
 
 
 
 <!--   ***   Clock   ***   -->
-
-<div id="domClock">
-  <div class="timez">
-    <h2 class="clock" id="minutes">25</h2>
-    <h2 class="clock">:</h2>
-    <h2 class="clock" id="seconds">00</h2>
-  </div>
+<div id="container">
+  <div id="aspect-ratio"></div>
+    <div class="circ circle-one">
+      <div class="second-hand"></div>
+      <div class="circ circle-two">
+        <div class="timez">
+          <h2 class="clock" id="minutes">25</h2>
+          <h2 class="clock">:</h2>
+          <h2 class="clock" id="seconds">00</h2>
+        </div>
+      </div>
+    </div>
 </div>
-
 
 <!--   ***   Controls   ***   -->
 

@@ -1,100 +1,146 @@
 body {
-  margin: 0;
-  background: #889;
-  text-align: center;
-  color: white;
-  font-family: Verdana;
+    margin: 0;
+    background: #889;
+    text-align: center;
+    color: white;
+    font-family: Verdana;
 
 }
 
-#title {
-  color: #348;
+h1 {
+    color: #348;
 }
 
 h2 {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 h3 {
-  font-size: 2.5em;
-  display: inline-block;
-  margin: 0;
+    font-size: 2.5em;
+    display: inline-block;
+    margin: 0;
 }
 
 .minCounter {
-  display: inline-block;
-  margin: 0 40px;
+    display: inline-block;
+    margin: 0 40px;
 }
 
 .controls {
-  display: inline-block;
-  margin-left: -3px;
+    display: inline-block;
+    margin-left: -3px;
 }
 
 .minuteBG {
-  background-color: black;
-  border: 1px solid white;
-  border-right: none; 
-  display: inline-block;
-  padding: 0 5px;
-  height: 50px;
-  vertical-align: top;
+    background-color: black;
+    border: 1px solid white;
+    border-right: none; 
+    display: inline-block;
+    padding: 0 5px;
+    height: 50px;
+    vertical-align: top;
 }
 
 .arrows {
-  display: block;
-  padding: 5px;
-  height: 26px;
-  width: 34px;
-  border: 1px solid white;
-  margin-left: -2px;
+    display: block;
+    padding: 5px;
+    height: 26px;
+    width: 34px;
+    border: 1px solid white;
+    margin-left: -2px;
 }
 
+/*  This forces .circle-one to height to match the responsive width
+*   inspired by Nathan Ryan http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio */
+#aspect-ratio { 
+    margin-top: 100%; /* 1:1 aspect ratio hack */
+}   
 #brkTime {
-  float: right;
-  margin-right: 20px;
+    float: right;
+    margin-right: 20px;
 }
 
-#domClock {
-  margin: 25px auto;
-  font-size: 30px;
-  background: black;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  border: 2px solid white;
+#container {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 25%;
 }
 
+.circ {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.circle-one {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: silver
+}
+
+.circle-two {
+    font-size: 30px;
+    background: black;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+
+}
+
+.second-hand {
+  background: #348;
+  position: relative;
+  left: 50%;
+  height: 50%;
+  width: 6px; 
+  -webkit-animation: rotate 20s infinite linear;
+  -webkit-transform-origin:  bottom;
+  -moz-animation: rotate 20s infinite linear;
+  -moz-transform-origin: left bottom;
+  -ms-animation: rotate 20s infinite linear;
+  -ms-transform-origin: left bottom;
+  -o-animation: rotate 20s infinite linear;
+  -o-transform-origin: left bottom;
+  animation: rotate 20s infinite linear;
+  transform-origin: left bottom;
+}
 
 .timez {
-  position: relative;
-  top: 41%;
+    position: relative;
+    top: 41%;
 }
 
 .clock {
-  display: inline;
+    display: inline;
 }
 
 .timer-btn {
-  padding: 10px;
-  margin: 5px;
-  font-size: 1.23em;
+    padding: 10px;
+    margin: 5px;
+    font-size: 1.23em;
 }
 
+/*  BUTTONS DISPLAY - only #start on load, then controled by JS */
 #start {
-  display: inline;
+    display: inline;
 }
 
 #resume {
-  display: none;
+    display: none;
 }
 
 #reset {
-  display: none;
+    display: none;
 }
 
 #pause {
-  display: none;
+    display: none;
 }
 
 
