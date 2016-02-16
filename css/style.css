@@ -4,11 +4,10 @@ body {
     text-align: center;
     color: white;
     font-family: Verdana;
-
 }
 
 h1 {
-    color: #348;
+    color: silver;
 }
 
 h2 {
@@ -64,7 +63,7 @@ h3 {
     display: inline-block;
     position: relative;
     text-align: center;
-    width: 25%;
+    width: 50%;
 }
 
 .circ {
@@ -84,7 +83,7 @@ h3 {
 
 .circle-two {
     font-size: 30px;
-    background: black;
+    background: #889;
     position: absolute;
     top: 5%;
     left: 5%;
@@ -94,21 +93,21 @@ h3 {
 }
 
 .second-hand {
-  background: #348;
-  position: relative;
-  left: 50%;
-  height: 50%;
-  width: 6px; 
-  -webkit-animation: rotate 20s infinite linear;
-  -webkit-transform-origin:  bottom;
-  -moz-animation: rotate 20s infinite linear;
-  -moz-transform-origin: left bottom;
-  -ms-animation: rotate 20s infinite linear;
-  -ms-transform-origin: left bottom;
-  -o-animation: rotate 20s infinite linear;
-  -o-transform-origin: left bottom;
-  animation: rotate 20s infinite linear;
-  transform-origin: left bottom;
+    background: #348;
+    position: relative;
+    left: 50%;
+    height: 50%;
+    width: 10px; 
+    -webkit-animation: rotate 60s infinite linear;
+    -webkit-transform-origin:  bottom;
+    -moz-animation: rotate 60s infinite linear;
+    -moz-transform-origin: left bottom;
+    -ms-animation: rotate 60s infinite linear;
+    -ms-transform-origin: left bottom;
+    -o-animation: rotate 60s infinite linear;
+    -o-transform-origin: left bottom;
+    animation: rotate 60s infinite linear;
+    transform-origin: left bottom;
 }
 
 .timez {
@@ -118,12 +117,16 @@ h3 {
 
 .clock {
     display: inline;
+    color: silver;
 }
 
 .timer-btn {
     padding: 10px;
     margin: 5px;
-    font-size: 1.23em;
+    font-size: .8em;
+    background: #BBB;
+    color: #348;
+    border: none;
 }
 
 /*  BUTTONS DISPLAY - only #start on load, then controled by JS */
@@ -136,12 +139,37 @@ h3 {
 }
 
 #reset {
-    display: none;
+    display: inline;
 }
 
 #pause {
-    display: none;
+    display: inline;
 }
 
+/* ANIMATION : ROTATE */
+@-webkit-keyframes rotate {
+  0% { -webkit-transform: rotate(0deg);}
+  100% { -webkit-transform: rotate(360deg);}
+} 
+
+@-moz-keyframes rotate {
+0% { -moz-transform: rotate(0deg);} 
+  100% { -moz-transform: rotate(360deg);}
+} 
+
+@-ms-keyframes rotate {
+  0% { -ms-transform: rotate(0deg);}
+  100% { -ms-transform: rotate(360deg);}
+} 
+
+@-o-keyframes rotate {
+  0% { -o-transform: rotate(0deg);}
+  100% { -o-transform: rotate(360deg);}
+} 
+
+@keyframes rotate {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+} 
 
 
