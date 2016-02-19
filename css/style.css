@@ -89,7 +89,9 @@ h3 {
     left: 5%;
     width: 90%;
     height: 90%;
-
+    /* Flexbox option? */
+    display: flex;
+    justify-content: center;
 }
 
 .second-hand {
@@ -112,7 +114,10 @@ h3 {
 
 .timez {
     position: relative;
-    top: 41%;
+    /* top: 36%;   /* originally 41%*/
+    
+    /* Flexbox solution -- needs a fallback? */
+    align-self: center;
 }
 
 .clock {
