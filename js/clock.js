@@ -7,6 +7,7 @@ var dispMin = 0;
 var dispSec = 0;
 var minField = document.getElementById('minutes');
 var secField = document.getElementById('seconds');
+var secondHand = document.getElementById('hand');
 var countdownId = 0;
 var running = false;
 var alarm = new Audio('audio/Siren_Noise.mp3');
@@ -28,7 +29,7 @@ pause.addEventListener("click", pauseTimer);
 
 
 // ** REGISTER TIME SELECT BUTTONS
-var pomUp = document.getElementById('pomUp');       // changing this little bit here, yo
+var pomUp = document.getElementById('pomUp');
 pomUp.addEventListener("click", pomValUp);
 
 var pomDown = document.getElementById('pomDown');

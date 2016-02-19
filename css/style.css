@@ -63,7 +63,9 @@ h3 {
     display: inline-block;
     position: relative;
     text-align: center;
+    /*
     width: 50%;
+    */
 }
 
 .circ {
@@ -190,3 +192,66 @@ h3 {
 } 
 
 
+/* MEDIA QUERIES - RESPONSIVE SIZING */
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+    #container {
+        width: 90%;
+    }
+
+    .timez {
+        font-size: .8em;
+    }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+    #container {
+        width: 80%;
+    }
+
+     .timez {
+        font-size: 1em;
+    }      
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    h1 {
+        font-size: 2.2em;
+    }
+
+    #container {
+        width: 70%;
+    }
+
+    .timez {
+        font-size: 1.2em;
+    }      
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    #container {
+        width: 60%;
+    }  
+
+    .timez {
+        font-size: 1.4em;
+    }         
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    h1 {
+        font-size: 2.6em;
+    }
+
+    #container {
+        width: 50%;
+    }
+    .timez {
+        font-size: 1.5em;
+    }      
+}
