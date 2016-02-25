@@ -12,53 +12,50 @@
 <h1>POMODORO TIMER</h1>
 
 
-<!--   ***   Minute Counter - Work Clock   *** -->
-<!--div class="minCounter">
-  <h2>WORK</h2>
-  <div class="minuteBG">
-    <h3 id="pomodoroMin">25</h3>
-  </div>
-
-  <div class="controls">
-    <button class="arrows" id="pomUp"><i class="fa fa-chevron-up"></i></button>
-    <button class="arrows" id="pomDown"><i class="fa fa-chevron-down"></i></button>
-  </div>
-</div-->
-
-
-<!--   ***   Minute Counter - Break Clock   ***   -->
-<!--div class="minCounter">
-  <h2>BREAK</h2>
-  <div class="minuteBG">
-    <h3 id="breakMin">5</h3>
-  </div>
-
-  <div class="controls">
-    <button class="arrows" id="brkUp"><i class="fa fa-chevron-up"></i></button>
-    <button class="arrows" id="brkDown"><i class="fa fa-chevron-down"></i></button>
-  </div>
-</div-->
-
-
-
 <!--   ***   Clock   ***   -->
 <div id="container">
   <div id="aspect-ratio"></div>
     <div class="circ circle-one"> <!-- Outer circle-->
       <div id="hand" class="second-hand"></div> <!-- other states: .hand-paused, .hand-stopped-->
       <div class="circ circle-two"> <!-- Inner circle-->
-        <div class="timez">
+        <div class="clock-face">
+        <div class="clock-face-row"> <!-- clock face row 1 -->
+          <div class="selector-work"> <!-- Minute Selector - Work Clock -->
+            <h2 class="selector-title">WORK</h2>
+            <div>
+              <h2 class="selector-component" id="pomUp">-</h2>
+              <h2 class="selector-component" id="pomodoroMin">25</h2>
+              <h2 class="selector-component" id="pomDown">+</h2>
+            </div>
+          </div>
+
+          <div class="selector-work"> <!-- Minute Selector - Break Clock -->
+            <h2 class="selector-title">BREAK</h2>
+            <div>
+              <h2 class="selector-component" id="brkUp">-</h2>
+              <h2 class="selector-component" id="breakMin">5</h2>
+              <h2 class="selector-component" id="brkDown">+</h2>
+            </div>
+          </div>
+        </div> <!-- /.row-1 -->
+
+
+        <div class="clock-face-row"> <!-- clock face row 2 -->
           <h2 class="clock" id="minutes">25</h2>
           <h2 class="clock">:</h2>
           <h2 class="clock" id="seconds">00</h2>
-          <!--   ***   Clock Controls   ***   -->
+        </div> <!-- /.row-2 -->
+
+                  
+        <div class="clock-face-row"> <!-- clock face row 3 -->
           <div>
-            <button class="timer-btn" id="start"><i class="fa fa-play"></i></button>
-            <!-- Remove ?? --> <!-- button class="timer-btn" id="resume">RESUME</button -->
-            <button class="timer-btn" id="pause"><i class="fa fa-pause"></i></button>
-            <button class="timer-btn" id="reset"><i class="fa fa-repeat"></i></button>
+            <i class="fa fa-play" id="start"></i>
+            <i class="fa fa-pause" id="pause"></i>
+            <i class="fa fa-repeat" id="reset"></i>
           </div>
-        </div>
+        </div> <!-- /.row-3 -->
+
+      </div> <!-- clock-face -->
       </div>
     </div>
 </div>

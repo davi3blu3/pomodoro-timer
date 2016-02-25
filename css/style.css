@@ -2,70 +2,63 @@ body {
     margin: 0;
     background: #889;
     text-align: center;
-    color: white;
+    color: silver;
     font-family: Verdana;
 }
 
-h1 {
+/* CLOCK FACE STYLE */
+
+.clock-face {
+    margin-top: 20%; 
+}
+
+.clock-face-row {
+    position: relative;
+    display: block;
+}
+
+.clock {
+    font-size: 3em;
+    display: inline-block;
     color: silver;
 }
 
-h2 {
-    margin-bottom: 10px;
-}
-
-h3 {
-    font-size: 2.5em;
-    display: inline-block;
-    margin: 0;
-}
-
-.minCounter {
+.selector-work {
     display: inline-block;
     margin: 0 40px;
 }
 
-.controls {
+.selector-title {
+  margin-bottom: 0;
+}
+
+.selector-component {
+  display: inline-block;
+  margin-top: 0;
+}
+
+.clock {
     display: inline-block;
-    margin-left: -3px;
 }
 
-.minuteBG {
-    background-color: black;
-    border: 1px solid white;
-    border-right: none; 
-    display: inline-block;
-    padding: 0 5px;
-    height: 50px;
-    vertical-align: top;
+.fa {
+  font-size: 2.5em;
 }
 
-.arrows {
-    display: block;
-    padding: 5px;
-    height: 26px;
-    width: 34px;
-    border: 1px solid white;
-    margin-left: -2px;
-}
 
-/*  This forces .circle-one to height to match the responsive width
-*   inspired by Nathan Ryan http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio */
+
+
 #aspect-ratio { 
-    margin-top: 100%; /* 1:1 aspect ratio hack */
+    margin-top: 100%;
+    /* 1:1 aspect ratio hack forces .circle-one to height to match the responsive width
+    *  inspired by Nathan Ryan http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio */
 }   
-#brkTime {
-    float: right;
-    margin-right: 20px;
-}
+
 
 #container {
     display: inline-block;
     position: relative;
     text-align: center;
-    /*
-    width: 50%;
-    */
 }
 
 .circ {
@@ -84,7 +77,6 @@ h3 {
 }
 
 .circle-two {
-    font-size: 30px;
     background: #889;
     position: absolute;
     top: 5%;
@@ -125,27 +117,7 @@ h3 {
     display: none;
 }
 
-.timez {
-    position: relative;
-    /* top: 36%;   /* originally 41%*/
-    
-    /* Flexbox solution -- needs a fallback? */
-    align-self: center;
-}
 
-.clock {
-    display: inline;
-    color: silver;
-}
-
-.timer-btn {
-    padding: 10px;
-    margin: 5px;
-    font-size: .8em;
-    background: #BBB;
-    color: #348;
-    border: none;
-}
 
 /*  BUTTONS DISPLAY - only #start on load, then controled by JS */
 #start {
@@ -249,7 +221,7 @@ h3 {
     }
 
     #container {
-        width: 50%;
+        width: 60%;
     }
     .timez {
         font-size: 1.5em;
