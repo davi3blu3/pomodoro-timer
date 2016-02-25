@@ -13,13 +13,9 @@ var running = false;
 var alarm = new Audio('audio/Siren_Noise.mp3');
 
 
-
 // ** REGISTER TIMER BUTTONS
 var start = document.getElementById('start');
 start.addEventListener("click", startTimer);
-
-var resume = document.getElementById('resume');
-resume.addEventListener("click", resumeTimer);
 
 var reset = document.getElementById('reset');
 reset.addEventListener("click", resetTimer);
@@ -44,6 +40,7 @@ brkDown.addEventListener("click", brkValDown);
 
 // ** TIMER CONTROL FUNCTIONS
 function startTimer() {
+  console.log("start timer");
   workTimeMin = document.getElementById('pomodoroMin').textContent;
   workTimeSec = workTimeMin * 60;
   countdownId = setInterval("counter()", 1000);
@@ -53,21 +50,10 @@ function startTimer() {
   start.style.display = "none";
   pause.style.display = "inline";
   reset.style.display = "none";
-  resume.style.display = "none";
-}
-
-function resumeTimer() {
-  countdownId = setInterval("counter()", 1000);
-  running = true;
-
-  // Change buttons displayed
-  start.style.display = "none";
-  pause.style.display = "inline";
-  reset.style.display = "none";
-  resume.style.display = "none";
 }
 
 function resetTimer() {
+  console.log("reset timer");
   workTimeSec = workTimeMin * 60
   dispMin = Math.floor(workTimeSec / 60);
   dispSec = workTimeSec - (dispMin * 60);
@@ -79,18 +65,17 @@ function resetTimer() {
   start.style.display = "inline";
   pause.style.display = "none";
   reset.style.display = "none";
-  resume.style.display = "none";
 }
 
 function pauseTimer() {
+  console.log("pause timer");
   clearInterval(countdownId);
   running = true;
 
   // Change buttons displayed
-  start.style.display = "none";
+  start.style.display = "inline";
   pause.style.display = "none";
   reset.style.display = "inline";
-  resume.style.display = "inline";
 }
 
 function counter() {

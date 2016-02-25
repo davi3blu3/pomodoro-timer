@@ -14,27 +14,27 @@
 
 <!--   ***   Clock   ***   -->
 <div id="container">
-  <div id="aspect-ratio"></div>
-    <div class="circ circle-one"> <!-- Outer circle-->
-      <div id="hand" class="second-hand"></div> <!-- other states: .hand-paused, .hand-stopped-->
-      <div class="circ circle-two"> <!-- Inner circle-->
+  <div id="aspect-ratio"></div> <!-- dummy div -->
+    <div class="circ circle-one"> <!-- Circle One = Outer circle-->
+      <div id="hand" class="second-hand hand-stopped"></div> <!-- animated states: .hand-paused, .hand-stopped-->
+      <div class="circ circle-two"> <!-- Circle Two = Inner circle-->
         <div class="clock-face">
         <div class="clock-face-row"> <!-- clock face row 1 -->
           <div class="selector-work"> <!-- Minute Selector - Work Clock -->
             <h2 class="selector-title">WORK</h2>
             <div>
-              <h2 class="selector-component" id="pomUp">-</h2>
+              <h2 class="selector-component" id="pomDown">-</h2>
               <h2 class="selector-component" id="pomodoroMin">25</h2>
-              <h2 class="selector-component" id="pomDown">+</h2>
+              <h2 class="selector-component" id="pomUp">+</h2>
             </div>
           </div>
 
           <div class="selector-work"> <!-- Minute Selector - Break Clock -->
             <h2 class="selector-title">BREAK</h2>
             <div>
-              <h2 class="selector-component" id="brkUp">-</h2>
+              <h2 class="selector-component" id="brkDown">-</h2>
               <h2 class="selector-component" id="breakMin">5</h2>
-              <h2 class="selector-component" id="brkDown">+</h2>
+              <h2 class="selector-component" id="brkUp">+</h2>
             </div>
           </div>
         </div> <!-- /.row-1 -->

@@ -124,16 +124,12 @@ body {
     display: inline;
 }
 
-#resume {
+#reset {
     display: none;
 }
 
-#reset {
-    display: inline;
-}
-
 #pause {
-    display: inline;
+    display: none;
 }
 
 /* ANIMATION : .second-hand ROTATE */
