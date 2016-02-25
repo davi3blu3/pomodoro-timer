@@ -46,6 +46,14 @@ function startTimer() {
   countdownId = setInterval("counter()", 1000);
   running = true;
 
+  // check second hand state, start or resume animation
+  if ( hand.className.match(/(?:^|\s)hand-stopped(?!\S)/) ) {
+    hand.className = hand.className.replace( /(?:^|\s)hand-stopped(?!\S)/g , '' );  
+  } else if ( hand.className.match(/(?:^|\s)hand-paused(?!\S)/) ) {
+    hand.className = hand.className.replace( /(?:^|\s)hand-paused(?!\S)/g , '' );  
+  }
+  
+
   // Change buttons displayed
   start.style.display = "none";
   pause.style.display = "inline";
@@ -59,7 +67,9 @@ function resetTimer() {
   dispSec = workTimeSec - (dispMin * 60);
   minField.innerHTML = dispMin;
   secField.innerHTML = (dispSec < 10 ? '0' : '') + dispSec;;
+  hand.className += " hand-stopped";
   running = false;
+
 
   // Change buttons displayed
   start.style.display = "inline";
@@ -70,6 +80,7 @@ function resetTimer() {
 function pauseTimer() {
   console.log("pause timer");
   clearInterval(countdownId);
+  hand.className += " hand-paused";
   running = true;
 
   // Change buttons displayed
