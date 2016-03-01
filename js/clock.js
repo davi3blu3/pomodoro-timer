@@ -1,16 +1,17 @@
 // ** DECLARE VARIABLES
-var workTimeMin = 0;
-var workTimeSec = 0;
-var breakTimeMin = 0;
-var breakTimeSec = 0;
-var dispMin = 0;
-var dispSec = 0;
-var minField = document.getElementById('minutes');
-var secField = document.getElementById('seconds');
-var secondHand = document.getElementById('hand');
-var countdownId = 0;
-var running = false;
-var alarm = new Audio('audio/Siren_Noise.mp3');
+var
+workTimeMin = 0,
+workTimeSec = 0,
+breakTimeMin = 0,
+breakTimeSec = 0,
+dispMin = 0,
+dispSec = 0,
+minField = document.getElementById('minutes'),
+secField = document.getElementById('seconds'),
+secondHand = document.getElementById('hand'),
+countdownId = 0,
+running = false,
+alarm = new Audio('audio/Siren_Noise.mp3');
 
 
 // ** REGISTER TIMER BUTTONS
@@ -67,7 +68,6 @@ function resetTimer() {
   dispSec = workTimeSec - (dispMin * 60);
   minField.innerHTML = dispMin;
   secField.innerHTML = (dispSec < 10 ? '0' : '') + dispSec;;
-  hand.className += " hand-stopped";
   running = false;
 
 
@@ -75,6 +75,12 @@ function resetTimer() {
   start.style.display = "inline";
   pause.style.display = "none";
   reset.style.display = "none";
+
+  //change hand-paused to hand-stopped
+  if ( hand.className.match(/(?:^|\s)hand-paused(?!\S)/) ) {
+    hand.className = hand.className.replace( /(?:^|\s)hand-paused(?!\S)/g , '' );  
+  }
+  hand.className += " hand-stopped";
 }
 
 function pauseTimer() {
