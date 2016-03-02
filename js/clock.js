@@ -170,4 +170,50 @@ function brkValDown() {
   }
 }
 
+// REFACTORING IN jQUERY
+// whoopie!
+
+// Declare variables
+var
+workTimeMin = 25,
+workTimeSec = 0,
+breakTimeMin = 5,
+breakTimeSec = 0,
+dispMin = 0,
+dispSec = 0,
+paused = false,
+alarm = new Audio('audio/Siren_Noise.mp3');
+
+
+//minField = document.getElementById('minutes'),
+$('#minutes')
+
+//secField = document.getElementById('seconds'),
+$('#seconds')
+
+//secondHand = document.getElementById('hand'),
+$('#hand')
+
+// BUTTONS
+$('#start').click(function() {
+  
+})
+$('#reset').click(function() {
+  
+})
+$('#pause').click(function() {
+  
+})
+$('#pomUp').click(function() {
+  
+})
+$('#pomDown').click(function() {
+  
+})
+$('#brkUp').click(function() {
+  
+})
+$('#brkDown').click(function() {
+  
+})
 
