@@ -30,9 +30,10 @@ $(document).ready(function () {
 
     // START THE TIMER
     $('#start').on('click', function() {
-        console.log("start timer");
-        workTimeMin = parseInt($('#pomodoroMin').html(), 10);
-        workTimeSec = workTimeMin * 60;
+        if (workTimeMin === undefined) {
+            workTimeMin = parseInt($('#pomodoroMin').html(), 10);
+            workTimeSec = workTimeMin * 60;
+        }
         countdownId = setInterval(counter, 1000);
         running = true;
 
@@ -51,7 +52,6 @@ $(document).ready(function () {
 
 	// PAUSE THE TIMER
     $('#pause').on('click', function() {
-        console.log("pause timer");
         clearInterval(countdownId);
         $('#hand').addClass('hand-paused');
         running = true;
