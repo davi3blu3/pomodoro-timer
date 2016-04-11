@@ -13,7 +13,7 @@ $(document).ready(function () {
         alarm = new Audio('audio/Siren_Noise.mp3');
 
     function counter() {
-        workTimeSec--;
+        workTimeSec -= 1;
         dispMin = Math.floor(workTimeSec / 60);
         dispSec = workTimeSec - (dispMin * 60);
         $('#minutes').html(dispMin);
