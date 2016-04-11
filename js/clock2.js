@@ -1,12 +1,14 @@
 // REFACTOR clock.js INTO JQUERY
 $(document).ready(function () {
+    'use strict';
+    
     var running = false,
-        newPomMin,
-        newBrkMin,
-        workTimeMin,
-        workTimeSec,
-        dispMin,
-        dispSec,
+        newPomMin,  // placeholder for new selected value
+        newBrkMin,  // placeholder for new selected value
+        workTimeMin,    // received selected time from DOM to start counter
+        workTimeSec,    // calculated from workTimeMin
+        dispMin,    // time values to be pushed to DOM
+        dispSec,    // ^^
         countdownId,
         alarm = new Audio('audio/Siren_Noise.mp3');
 
@@ -15,7 +17,7 @@ $(document).ready(function () {
         dispMin = Math.floor(workTimeSec / 60);
         dispSec = workTimeSec - (dispMin * 60);
         $('#minutes').html(dispMin);
-        $('#seconds').html((dispSec < 10 ? '0' : '') + dispSec);
+        $('#seconds').html((dispSec < 10 ? '0' : '') + dispSec);    // add leading 0 to seconds
         if (workTimeSec === 0) {
             // console.log("Time's Up!");
             // alarm.play();
@@ -30,7 +32,7 @@ $(document).ready(function () {
 
     // START THE TIMER
     $('#start').on('click', function() {
-        if (workTimeMin === undefined) {
+        if (workTimeMin === undefined || workTimeMin === null) {
             workTimeMin = parseInt($('#pomodoroMin').html(), 10);
             workTimeSec = workTimeMin * 60;
         }
@@ -54,7 +56,6 @@ $(document).ready(function () {
     $('#pause').on('click', function() {
         clearInterval(countdownId);
         $('#hand').addClass('hand-paused');
-        running = true;
 
         // Change buttons displayed
         start.style.display = "inline";
@@ -67,8 +68,9 @@ $(document).ready(function () {
         workTimeSec = workTimeMin * 60
         dispMin = Math.floor(workTimeSec / 60);
         dispSec = workTimeSec - (dispMin * 60);
-        $('minutes').html(dispMin);
-        $('seconds').html((dispSec < 10 ? '0' : '') + dispSec);
+        $('#minutes').html(dispMin);
+        $('#seconds').html((dispSec < 10 ? '0' : '') + dispSec);
+        workTimeMin = null;
         running = false;
 
 
