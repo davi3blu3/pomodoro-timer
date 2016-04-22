@@ -1,6 +1,7 @@
 body {
     margin: 0;
-    background: #889;
+    /*background: #889;*/
+    background-color: red;
     text-align: center;
     color: silver;
     font-family: Verdana;
@@ -77,7 +78,8 @@ body {
 }
 
 .circle-two {
-    background: #889;
+    /*background: #889;*/
+    background-color: red;
     position: absolute;
     top: 5%;
     left: 5%;

@@ -62,13 +62,16 @@ $(document).ready(function () {
         reset.style.display = "inline";
     });  
 
-    // RESET THE TIMER
+    // RESET THE TIMER                          // broken? Reset not going back to start time
     $('#reset').on('click', function() {
-        workTimeSec = workTimeMin * 60
-        dispMin = Math.floor(workTimeSec / 60);
-        dispSec = workTimeSec - (dispMin * 60);
-        $('minutes').html(dispMin);
-        $('seconds').html((dispSec < 10 ? '0' : '') + dispSec);
+        // workTimeSec = workTimeMin * 60
+        // dispMin = Math.floor(workTimeSec / 60);
+        // dispSec = workTimeSec - (dispMin * 60);
+        workTimeMin = parseInt($('#pomodoroMin').html(), 10);
+        console.log(workTimeMin);
+        workTimeSec = workTimeMin * 60;
+        $('#minutes').html(workTimeMin);
+        $('#seconds').html("00");
         running = false;
 
 
