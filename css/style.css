@@ -39,12 +39,12 @@ body {
 }
 
 .selector-title {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .selector-component {
   display: inline-block;
-  margin-top: 0;
+  margin: 0;
 }
 
 .clock {
