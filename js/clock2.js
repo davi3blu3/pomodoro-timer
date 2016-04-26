@@ -25,6 +25,7 @@ $(document).ready(function () {
             console.log("Time's Up!");
             // alarm.play();
             clearInterval(countdownId);
+            workTimeMin = null;
             // SWITCH TO BREAK CLOCK
             // Break clock appearance
             $('#title').html("BREAK TIME!");
@@ -42,7 +43,6 @@ $(document).ready(function () {
                 breakTimeSec = breakTimeMin * 60;
             }
             countdownId = setInterval(breakCounter, 100);
-            running = true;
             whichClock = "break";
         }
     }
@@ -57,14 +57,25 @@ $(document).ready(function () {
             console.log("Time's Up!");
             // alarm.play();
             clearInterval(countdownId);
+            breakTimeMin = null;
             // SWITCH TO POMODORO CLOCK
             // Pom clock appearance
+            $('#title').html("POMODORO TIMER");
+            
+            $('body').css('background', '#889');
+            $('.circle-two').css('background', '#889');
+            
+            $('body').css('color', 'silver');
+            $('.clock').css('color', 'silver');
+            $('.circle-one').css('background', 'silver');
 
             // Pom clock function
-            // breakTimeMin = document.getElementById('breakMin').textContent;
-            // breakTimeSec = breakTimeMin * 60;
-            // countdownId = setInterval("breakCounter()", 1000);
-            // running = true;
+            if (workTimeMin === undefined || workTimeMin === null) {
+                workTimeMin = parseInt($('#pomodoroMin').html(), 10);
+                workTimeSec = workTimeMin * 60;
+            }
+            countdownId = setInterval(counter, 100);
+            whichClock = "work";
         }
     }    
 
@@ -111,7 +122,7 @@ $(document).ready(function () {
         reset.style.display = "inline";
     });  
 
-    // RESET THE TIMER                          // broken? Reset not going back to start time
+    // RESET THE TIMER
     $('#reset').on('click', function() {
 
         workTimeSec = workTimeMin * 60
