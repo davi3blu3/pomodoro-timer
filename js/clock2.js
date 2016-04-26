@@ -11,6 +11,7 @@ $(document).ready(function () {
         dispSec,    // ^^
         countdownId,
         alarm = new Audio('audio/Siren_Noise.mp3');
+    console.log($('body').css('color'));
 
     function counter() {
         workTimeSec -= 1;
@@ -19,16 +20,49 @@ $(document).ready(function () {
         $('#minutes').html(dispMin);
         $('#seconds').html((dispSec < 10 ? '0' : '') + dispSec);    // add leading 0 to seconds
         if (workTimeSec === 0) {
-            // console.log("Time's Up!");
+            console.log("Time's Up!");
             // alarm.play();
-            // clearInterval(countdownId);
-            // // SWITCH TO BREAK CLOCK
+            clearInterval(countdownId);
+            // SWITCH TO BREAK CLOCK
+            // Break clock appearance
+            $('#title').html("BREAK TIME!");
+            
+            $('body').css('background', '#ED4337');
+            $('.circle-two').css('background', '#ED4337');
+            
+            $('body').css('color', 'gold');
+            $('.clock').css('color', 'gold');
+            $('.circle-one').css('background', 'gold');
+            // Break clock function
+            
+            // breakTimeMin = document.getElementById('breakMin').textContent;
+            // breakTimeSec = breakTimeMin * 60;
+            // countdownId = setInterval("breakCounter()", 1000);
+            // running = true;
+            console.log($('body').css('color'));
+        }
+    }
+    
+    function breakCounter() {
+        workTimeSec -= 1;
+        dispMin = Math.floor(workTimeSec / 60);
+        dispSec = workTimeSec - (dispMin * 60);
+        $('#minutes').html(dispMin);
+        $('#seconds').html((dispSec < 10 ? '0' : '') + dispSec);    // add leading 0 to seconds
+        if (workTimeSec === 0) {
+            console.log("Time's Up!");
+            // alarm.play();
+            clearInterval(countdownId);
+            // SWITCH TO BREAK CLOCK
+            // Break clock appearance
+
+            // Break clock function
             // breakTimeMin = document.getElementById('breakMin').textContent;
             // breakTimeSec = breakTimeMin * 60;
             // countdownId = setInterval("breakCounter()", 1000);
             // running = true;
         }
-    }
+    }    
 
     // START THE TIMER
     $('#start').on('click', function() {
@@ -36,7 +70,7 @@ $(document).ready(function () {
             workTimeMin = parseInt($('#pomodoroMin').html(), 10);
             workTimeSec = workTimeMin * 60;
         }
-        countdownId = setInterval(counter, 1000);
+        countdownId = setInterval(counter, 100);
         running = true;
 
         // check second hand state, start or resume animation
