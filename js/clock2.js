@@ -7,6 +7,8 @@ $(document).ready(function () {
         newBrkMin,  // placeholder for new selected value
         workTimeMin,    // received selected time from DOM to start counter
         workTimeSec,    // calculated from workTimeMin
+        breakTimeMin,
+        breakTimeSec,
         dispMin,    // time values to be pushed to DOM
         dispSec,    // ^^
         countdownId,
@@ -33,30 +35,36 @@ $(document).ready(function () {
             $('body').css('color', 'gold');
             $('.clock').css('color', 'gold');
             $('.circle-one').css('background', 'gold');
-            // Break clock function
             
+            // Break clock function
+            if (breakTimeMin === undefined || breakTimeMin === null) {
+                breakTimeMin = parseInt($('#breakMin').html(), 10);
+                breakTimeSec = breakTimeMin * 60;
+            }
+            countdownId = setInterval(breakCounter, 100);
+            running = true;
             // breakTimeMin = document.getElementById('breakMin').textContent;
             // breakTimeSec = breakTimeMin * 60;
             // countdownId = setInterval("breakCounter()", 1000);
             // running = true;
-            console.log($('body').css('color'));
         }
     }
     
     function breakCounter() {
-        workTimeSec -= 1;
-        dispMin = Math.floor(workTimeSec / 60);
-        dispSec = workTimeSec - (dispMin * 60);
+        
+        breakTimeSec -= 1;
+        dispMin = Math.floor(breakTimeSec / 60);
+        dispSec = breakTimeSec - (dispMin * 60);
         $('#minutes').html(dispMin);
         $('#seconds').html((dispSec < 10 ? '0' : '') + dispSec);    // add leading 0 to seconds
-        if (workTimeSec === 0) {
+        if (breakTimeSec === 0) {
             console.log("Time's Up!");
             // alarm.play();
             clearInterval(countdownId);
-            // SWITCH TO BREAK CLOCK
-            // Break clock appearance
+            // SWITCH TO POMODORO CLOCK
+            // Pom clock appearance
 
-            // Break clock function
+            // Pom clock function
             // breakTimeMin = document.getElementById('breakMin').textContent;
             // breakTimeSec = breakTimeMin * 60;
             // countdownId = setInterval("breakCounter()", 1000);
