@@ -12,8 +12,8 @@ $(document).ready(function () {
         dispMin,    // time values to be pushed to DOM
         dispSec,    // ^^
         countdownId,
+        whichClock = "work",    // change to "break" when break clock is running
         alarm = new Audio('audio/Siren_Noise.mp3');
-    console.log($('body').css('color'));
 
     function counter() {
         workTimeSec -= 1;
@@ -43,15 +43,11 @@ $(document).ready(function () {
             }
             countdownId = setInterval(breakCounter, 100);
             running = true;
-            // breakTimeMin = document.getElementById('breakMin').textContent;
-            // breakTimeSec = breakTimeMin * 60;
-            // countdownId = setInterval("breakCounter()", 1000);
-            // running = true;
+            whichClock = "break";
         }
     }
     
     function breakCounter() {
-        
         breakTimeSec -= 1;
         dispMin = Math.floor(breakTimeSec / 60);
         dispSec = breakTimeSec - (dispMin * 60);
@@ -74,12 +70,22 @@ $(document).ready(function () {
 
     // START THE TIMER
     $('#start').on('click', function() {
-        if (workTimeMin === undefined || workTimeMin === null) {
-            workTimeMin = parseInt($('#pomodoroMin').html(), 10);
-            workTimeSec = workTimeMin * 60;
+        if (whichClock === "work") {
+            if (workTimeMin === undefined || workTimeMin === null) {
+                workTimeMin = parseInt($('#pomodoroMin').html(), 10);
+                workTimeSec = workTimeMin * 60;
+            }
+            countdownId = setInterval(counter, 100);
+            running = true;
+        } else if (whichClock === "break") {
+            if (breakTimeMin === undefined || breakTimeMin === null) {
+                breakTimeMin = parseInt($('#breakMin').html(), 10);
+                breakTimeSec = breakTimeMin * 60;
+            }
+            countdownId = setInterval(breakCounter, 100);
+            running = true;
         }
-        countdownId = setInterval(counter, 100);
-        running = true;
+
 
         // check second hand state, start or resume animation
         if ($('#hand').hasClass('hand-stopped')) {
