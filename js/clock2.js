@@ -124,15 +124,21 @@ $(document).ready(function () {
 
     // RESET THE TIMER
     $('#reset').on('click', function() {
-
-        workTimeSec = workTimeMin * 60
-        dispMin = Math.floor(workTimeSec / 60);
-        dispSec = workTimeSec - (dispMin * 60);
+        if (whichClock === "work") {
+            workTimeSec = workTimeMin * 60
+            dispMin = Math.floor(workTimeSec / 60);
+            dispSec = workTimeSec - (dispMin * 60);
+            workTimeMin = null;
+        } else if (whichClock === "break") {
+            breakTimeSec = breakTimeMin * 60
+            dispMin = Math.floor(breakTimeSec / 60);
+            dispSec = breakTimeSec - (dispMin * 60);
+            breakTimeMin = null;
+        }
+            
         $('#minutes').html(dispMin);
-        $('#seconds').html((dispSec < 10 ? '0' : '') + dispSec);
-        workTimeMin = null;
+        $('#seconds').html((dispSec < 10 ? '0' : '') + dispSec);            
         running = false;
-
 
         // Change buttons displayed
         start.style.display = "inline";
