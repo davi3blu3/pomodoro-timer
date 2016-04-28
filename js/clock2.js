@@ -157,6 +157,8 @@ $(document).ready(function () {
             if (running === false && newPomMin < 99){
                 newPomMin++;
                 $('#pomodoroMin').html(newPomMin);
+            }
+            if (whichClock === "work") {
                 $('#minutes').html(newPomMin);
             }
     });
@@ -167,8 +169,10 @@ $(document).ready(function () {
             if (running === false && newPomMin > 1){
                 newPomMin--;
                 $('#pomodoroMin').html(newPomMin);
+            }
+            if (whichClock === "work") {
                 $('#minutes').html(newPomMin);
-            }                    
+            }
     });
     
     // BREAK MINUTES UP
@@ -177,8 +181,10 @@ $(document).ready(function () {
             if (running === false && newBrkMin < 99){
                 newBrkMin++;
                 $('#breakMin').html(newBrkMin);
-                //$('#minutes').html(newBrkMin);
-            }                   
+            }
+            if (whichClock === "break") {
+                $('#minutes').html(newBrkMin);
+            }
     });
     
     // BREAK MINUTES DOWN
@@ -187,8 +193,10 @@ $(document).ready(function () {
             if (running === false && newBrkMin > 1){
                 newBrkMin--;
                 $('#breakMin').html(newBrkMin);
-                //$('#minutes').html(newBrkMin);
-            }                         
+            }
+            if (whichClock === "break") {
+                $('#minutes').html(newBrkMin);
+            }        
     });
   
 });
