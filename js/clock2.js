@@ -1,17 +1,16 @@
-// REFACTOR clock.js INTO JQUERY
 $(document).ready(function () {
     'use strict';
     
-    var running = false,
+    var running = false,// prevents button press by monitoring run status
         newPomMin,  // placeholder for new selected value
         newBrkMin,  // placeholder for new selected value
         workTimeMin,    // received selected time from DOM to start counter
         workTimeSec,    // calculated from workTimeMin
-        breakTimeMin,
-        breakTimeSec,
-        dispMin,    // time values to be pushed to DOM
-        dispSec,    // ^^
-        countdownId,
+        breakTimeMin,   // received selected time from DOM to start breakCounter
+        breakTimeSec,   // calculated from breakTimeMin
+        dispMin,    // minute values to be pushed to DOM
+        dispSec,    // second values to be pushed to DOM
+        countdownId,    //  handle for setInterval
         whichClock = "work",    // change to "break" when break clock is running
         alarm = new Audio('audio/Siren_Noise.mp3');
 
@@ -42,7 +41,7 @@ $(document).ready(function () {
                 breakTimeMin = parseInt($('#breakMin').html(), 10);
                 breakTimeSec = breakTimeMin * 60;
             }
-            countdownId = setInterval(breakCounter, 100);
+            countdownId = setInterval(breakCounter, 1000);
             whichClock = "break";
         }
     }
@@ -74,7 +73,7 @@ $(document).ready(function () {
                 workTimeMin = parseInt($('#pomodoroMin').html(), 10);
                 workTimeSec = workTimeMin * 60;
             }
-            countdownId = setInterval(counter, 100);
+            countdownId = setInterval(counter, 1000);
             whichClock = "work";
         }
     }    
@@ -86,14 +85,14 @@ $(document).ready(function () {
                 workTimeMin = parseInt($('#pomodoroMin').html(), 10);
                 workTimeSec = workTimeMin * 60;
             }
-            countdownId = setInterval(counter, 100);
+            countdownId = setInterval(counter, 1000);
             running = true;
         } else if (whichClock === "break") {
             if (breakTimeMin === undefined || breakTimeMin === null) {
                 breakTimeMin = parseInt($('#breakMin').html(), 10);
                 breakTimeSec = breakTimeMin * 60;
             }
-            countdownId = setInterval(breakCounter, 100);
+            countdownId = setInterval(breakCounter, 1000);
             running = true;
         }
 
@@ -197,7 +196,5 @@ $(document).ready(function () {
                     $('#minutes').html(newBrkMin);
                 } 
             }       
-    });
-  
+    });  
 });
-
