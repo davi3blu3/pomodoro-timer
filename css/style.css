@@ -16,12 +16,6 @@ body {
 
 /* CLOCK FACE STYLE */
 
-/*
-.clock-face {
-    margin-top: 20%; 
-}
-*/
-
 .clock-face-row {
     position: relative;
     display: block;
@@ -35,7 +29,6 @@ body {
 
 .min-selector {
     display: inline-block;
-    margin: 0 40px;
 }
 
 .selector-title {
@@ -174,7 +167,7 @@ body {
 /* MEDIA QUERIES - RESPONSIVE SIZING */
 
 /* Custom, iPhone Retina */ 
-@media only screen and (min-width : 320px) {
+@media only screen and (min-width : 0px) {
     #container {
         width: 90%;
     }
@@ -182,6 +175,16 @@ body {
     .timez {
         font-size: .8em;
     }
+    
+    #title {
+        font-size: 1.7em;
+        color: red;
+    }
+
+    .min-selector {
+        margin: 0 10px;
+    }   
+    
 }
 
 /* Extra Small Devices, Phones */ 
@@ -194,21 +197,36 @@ body {
         font-size: 1em;
     }
     
+    #title {
+        font-size: 2.2em;
+        color: yellow;
+    }
+
+    .min-selector {
+        margin: 0 20px;
+    }   
+    
 }
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
-    h1 {
-        font-size: 2.2em;
-    }
-
     #container {
         width: 70%;
     }
 
     .timez {
         font-size: 1.2em;
+    }
+    
+    #title {
+        font-size: 2.5em;
+        color: blue;
+    }
+    
+    .min-selector {
+        margin: 0 40px;
     }      
+ 
 }
 
 /* Medium Devices, Desktops */
@@ -221,7 +239,11 @@ body {
         font-size: 1.4em;
     }
 
-
+    
+    #title {
+        font-size: 2.8em;
+        color: blue;
+    }    
 }
 
 /* Large Devices, Wide Screens */
