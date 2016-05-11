@@ -178,12 +178,19 @@ body {
     
     #title {
         font-size: 1.7em;
-        color: red;
     }
 
     .min-selector {
         margin: 0 10px;
-    }   
+    }  
+    
+    h2.selector-title, h2.selector-component {
+        font-size: 1.2em;
+    }
+    
+    .clock {
+        font-size: 1.6em;
+    }
     
 }
 
@@ -199,13 +206,19 @@ body {
     
     #title {
         font-size: 2.2em;
-        color: yellow;
     }
 
     .min-selector {
         margin: 0 20px;
-    }   
+    }
     
+    h2.selector-title, h2.selector-component {
+        font-size: 1.5em;
+    }
+    
+    .clock {
+        font-size: 2em;
+    }  
 }
 
 /* Small Devices, Tablets */
@@ -220,13 +233,19 @@ body {
     
     #title {
         font-size: 2.5em;
-        color: blue;
     }
     
     .min-selector {
         margin: 0 40px;
-    }      
- 
+    }
+
+    h2.selector-title, h2.selector-component {
+        font-size: 1.8em;
+    }
+    
+    .clock {
+        font-size: 3.2em;
+    }    
 }
 
 /* Medium Devices, Desktops */
@@ -242,7 +261,6 @@ body {
     
     #title {
         font-size: 2.8em;
-        color: blue;
     }    
 }
 
