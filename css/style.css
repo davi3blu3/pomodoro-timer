@@ -86,10 +86,14 @@ body {
     left: 5%;
     width: 90%;
     height: 90%;
-    /* Flexbox option? */
+    /* Flexbox centering of clock face */
+    display: -webkit-flex;
     display: flex;
-    justify-content: center;
+    -webkit-align-items: center;
+    -webkit-flex-align: center;
     align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
 }
 
 .second-hand {
