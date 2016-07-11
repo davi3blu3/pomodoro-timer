@@ -51,11 +51,13 @@ body {
 
 
 
+/*
 #aspect-ratio { 
     margin-top: 100%;
-    /* 1:1 aspect ratio hack forces .circle-one to height to match the responsive width
-    *  inspired by Nathan Ryan http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio */
+     1:1 aspect ratio hack forces .circle-one to height to match the responsive width
+    /*  inspired by Nathan Ryan http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio /
 }   
+*/
 
 
 #container {
@@ -70,6 +72,7 @@ body {
     border-radius: 50%;
 }
 
+/*
 .circle-one {
     position: absolute;
     top: 0;
@@ -78,10 +81,11 @@ body {
     right: 0;
     background-color: silver
 }
+*/
 
 .circle-two {
     background: #889;
-    position: absolute;
+    position: relative;
     top: 5%;
     left: 5%;
     width: 90%;
@@ -92,6 +96,7 @@ body {
     align-items: center;
 }
 
+/*
 .second-hand {
     background: #348;
     position: relative;
@@ -111,15 +116,16 @@ body {
 }
 
 .hand-paused {
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+    -webkit-animation-play-state: paused;
     animation-play-state: paused;
 }
 
 .hand-stopped {
-    -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+    -webkit-animation-play-state: paused; 
     animation-play-state: paused;
     display: none;
 }
+*/
 
 
 
@@ -137,6 +143,7 @@ body {
 }
 
 /* ANIMATION : .second-hand ROTATE */
+/*
 @-webkit-keyframes rotate {
     0% { -webkit-transform: rotate(0deg);}
     100% { -webkit-transform: rotate(360deg);}
@@ -162,6 +169,7 @@ body {
     0% { transform: rotate(0deg);}
     100% { transform: rotate(360deg);}
 } 
+*/
 
 
 /* MEDIA QUERIES - RESPONSIVE SIZING */
