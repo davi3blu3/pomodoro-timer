@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<h1 id="title">POMODORO TIMER</h1>
+<div class="circle">
+<div class="clock-face">
+
+<div class="clock-face-row"> <!-- clock face row 1 -->
+  <div class="min-selector"> <!-- Minute Selector - Work Clock -->
+    <h2 class="selector-title">WORK</h2>
+    <div>
+      <h2 class="selector-component" id="pomDown">-</h2>
+      <h2 class="selector-component" id="pomodoroMin">25</h2>
+      <h2 class="selector-component" id="pomUp">+</h2>
+    </div>
+  </div>
+
+  <div class="min-selector"> <!-- Minute Selector - Break Clock -->
+    <h2 class="selector-title">BREAK</h2>
+    <div>
+      <h2 class="selector-component" id="brkDown">-</h2>
+      <h2 class="selector-component" id="breakMin">5</h2>
+      <h2 class="selector-component" id="brkUp">+</h2>
+    </div>
+  </div>
+</div> <!-- .row-1 -->
+
+<div class="clock-face-row"> <!-- clock face row 2 -->
+  <h2 class="clock" id="minutes">25</h2>
+  <h2 class="clock">:</h2>
+  <h2 class="clock" id="seconds">00</h2>
+</div> <!-- .row-2 -->
+
+<div class="clock-face-row"> <!-- clock face row 3 -->
+  <div>
+    <i class="fa fa-play" id="start"></i>
+    <i class="fa fa-pause" id="pause"></i>
+    <i class="fa fa-repeat" id="reset"></i>
+  </div>
+</div> <!-- .row-3 -->
+
+</div> <!-- .clock-face -->
+</div> <!-- .circle -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/clock2.js"></script>
+
+</body>
+</html>

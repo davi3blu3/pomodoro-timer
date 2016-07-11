@@ -14,7 +14,32 @@ body {
     font-family: Verdana;
 }
 
+#container {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
 /* CLOCK FACE STYLE */
+
+.circle {
+    margin: 0 auto;
+    width: 600px;
+    height: 600px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: solid 1px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock-face {
+
+    
+
+}
 
 .clock-face-row {
     position: relative;
@@ -51,85 +76,8 @@ body {
 
 
 
-/*
-#aspect-ratio { 
-    margin-top: 100%;
-     1:1 aspect ratio hack forces .circle-one to height to match the responsive width
-    /*  inspired by Nathan Ryan http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio /
-}   
-*/
 
 
-#container {
-    display: inline-block;
-    position: relative;
-    text-align: center;
-}
-
-.circ {
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-}
-
-/*
-.circle-one {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: silver
-}
-*/
-
-.circle-two {
-    background: #889;
-    position: relative;
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
-    /* Flexbox centering of clock face */
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    -webkit-flex-align: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-}
-
-/*
-.second-hand {
-    background: #348;
-    position: relative;
-    left: 50%;
-    height: 50%;
-    width: 10px; 
-    -webkit-animation: rotate 60s infinite linear;
-    -webkit-transform-origin:  bottom;
-    -moz-animation: rotate 60s infinite linear;
-    -moz-transform-origin: left bottom;
-    -ms-animation: rotate 60s infinite linear;
-    -ms-transform-origin: left bottom;
-    -o-animation: rotate 60s infinite linear;
-    -o-transform-origin: left bottom;
-    animation: rotate 60s infinite linear;
-    transform-origin: left bottom;
-}
-
-.hand-paused {
-    -webkit-animation-play-state: paused;
-    animation-play-state: paused;
-}
-
-.hand-stopped {
-    -webkit-animation-play-state: paused; 
-    animation-play-state: paused;
-    display: none;
-}
-*/
 
 
 
