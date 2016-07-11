@@ -29,16 +29,9 @@ body {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    border: solid 1px black;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.clock-face {
-
-    
-
 }
 
 .clock-face-row {
@@ -74,8 +67,32 @@ body {
 }
 
 
+/* ROTATING SECONDS ANIMATION */
 
+.inner-dot {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: blue;
+    transform-style: flat;
+}
 
+#one { transform: rotate(-60deg) translateX(300px); }
+#two { transform: rotate(-30deg) translateX(300px); }
+#three { transform: rotate(0deg) translateX(300px); }
+#four { transform: rotate(30deg) translateX(300px); }
+#five { transform: rotate(60deg) translateX(300px); }
+#six { transform: rotate(90deg) translateX(300px); }
+#seven { transform: rotate(120deg) translateX(300px); }
+#eight { transform: rotate(150deg) translateX(300px); }
+#nine { transform: rotate(180deg) translateX(300px); }
+#ten { transform: rotate(210deg) translateX(300px); }
+#eleven { transform: rotate(240deg) translateX(300px); }
+#twelve { transform: rotate(-90deg) translateX(300px); }
 
 
 
