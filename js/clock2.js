@@ -13,6 +13,12 @@ $(document).ready(function () {
         countdownId,    //  handle for setInterval
         whichClock = "work",    // change to "break" when break clock is running
         alarm = new Audio('audio/Siren_Noise.mp3');
+    
+    // ANIMATION VARIABLES
+    var dots = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"],
+        currentDot = 11, // adjusted for zero index, represents dot twelve
+        animation;
+    
 
     function counter() {
         workTimeSec -= 1;
@@ -76,10 +82,37 @@ $(document).ready(function () {
             countdownId = setInterval(counter, 1000);
             whichClock = "work";
         }
-    }    
+    }
+
+    // insures number is within 0 - 11 range
+    function adjustIndex(index) {
+        // if index is > 11, subtract 12
+        if ( index > 11 ){ index -= 12; };
+        // if index is < 0, add 12
+        if ( index < 0 ){ index += 12; };
+        return index;
+    }
+
+    function rotateDots() {
+        // keep variables within range
+        var curr = currentDot,
+            trail1 = adjustIndex(currentDot - 1),
+            trail2 = adjustIndex(currentDot - 2),
+            trail3 = adjustIndex(currentDot - 3);
+        // make all dots invisible
+        $(".inner-dot").css("opacity", 0);
+        // make current 100% visible, trailers partially visible
+        $("#" + dots[curr]).css("opacity", 1);
+        $("#" + dots[trail1]).css("opacity", .75);
+        $("#" + dots[trail2]).css("opacity", .5);
+        $("#" + dots[trail3]).css("opacity", .25);
+        // increment currentDot
+        currentDot = adjustIndex( currentDot += 1 );
+    }      
 
     // START THE TIMER
     $('#start').on('click', function() {
+        animation = setInterval(rotateDots, 83.333); // Starts animation. 1000 miliesconds divided by 12
         if (whichClock === "work") {
             if (workTimeMin === undefined || workTimeMin === null) {
                 workTimeMin = parseInt($('#pomodoroMin').html(), 10);
@@ -98,11 +131,11 @@ $(document).ready(function () {
 
 
         // check second hand state, start or resume animation
-        if ($('#hand').hasClass('hand-stopped')) {
-            $('#hand').removeClass('hand-stopped');
-        } else if ($('#hand').hasClass('hand-paused')) {
-            $('#hand').removeClass('hand-paused');
-        }
+//        if ($('#hand').hasClass('hand-stopped')) {
+//            $('#hand').removeClass('hand-stopped');
+//        } else if ($('#hand').hasClass('hand-paused')) {
+//            $('#hand').removeClass('hand-paused');
+//        }
 
         // Change buttons displayed
         start.style.display = "none";
@@ -113,7 +146,9 @@ $(document).ready(function () {
 	// PAUSE THE TIMER
     $('#pause').on('click', function() {
         clearInterval(countdownId);
-        $('#hand').addClass('hand-paused');
+        clearInterval(animation);
+        currentDot = 11;
+//        $('#hand').addClass('hand-paused');
 
         // Change buttons displayed
         start.style.display = "inline";
@@ -123,6 +158,8 @@ $(document).ready(function () {
 
     // RESET THE TIMER
     $('#reset').on('click', function() {
+        clearInterval(animation);
+        $(".inner-dot").css("opacity", 1);
         if (whichClock === "work") {
             workTimeSec = workTimeMin * 60
             dispMin = Math.floor(workTimeSec / 60);
@@ -196,35 +233,5 @@ $(document).ready(function () {
                     $('#minutes').html(newBrkMin);
                 } 
             }       
-    });
-var dots = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"],
-    currentDot = 11, // adjusted for zero index, represents dot twelve
-    // begin rotation
-    animation = setInterval(rotateDots, 83.333); // 1000 miliesconds divided by 12
-
-// insures number is within 0 - 11 range
-function adjustIndex(index) {
-    // if index is > 11, subtract 12
-    if ( index > 11 ){ index -= 12; };
-    // if index is < 0, add 12
-    if ( index < 0 ){ index += 12; };
-    return index;
-}
-
-function rotateDots() {
-    // keep variables within range
-    var curr = currentDot,
-        trail1 = adjustIndex(currentDot - 1),
-        trail2 = adjustIndex(currentDot - 2),
-        trail3 = adjustIndex(currentDot - 3);
-    // make all dots invisible
-    $(".inner-dot").css("opacity", 0);
-    // make current 100% visible, trailers partially visible
-    $("#" + dots[curr]).css("opacity", 1);
-    $("#" + dots[trail1]).css("opacity", .75);
-    $("#" + dots[trail2]).css("opacity", .5);
-    $("#" + dots[trail3]).css("opacity", .25);
-    // increment currentDot
-    currentDot = adjustIndex( currentDot += 1 );
-}    
+    });  
 });
