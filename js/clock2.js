@@ -197,4 +197,34 @@ $(document).ready(function () {
                 } 
             }       
     });
+var dots = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"],
+    currentDot = 11, // adjusted for zero index, represents dot twelve
+    // begin rotation
+    animation = setInterval(rotateDots, 83.333); // 1000 miliesconds divided by 12
+
+// insures number is within 0 - 11 range
+function adjustIndex(index) {
+    // if index is > 11, subtract 12
+    if ( index > 11 ){ index -= 12; };
+    // if index is < 0, add 12
+    if ( index < 0 ){ index += 12; };
+    return index;
+}
+
+function rotateDots() {
+    // keep variables within range
+    var curr = currentDot,
+        trail1 = adjustIndex(currentDot - 1),
+        trail2 = adjustIndex(currentDot - 2),
+        trail3 = adjustIndex(currentDot - 3);
+    // make all dots invisible
+    $(".inner-dot").css("opacity", 0);
+    // make current 100% visible, trailers partially visible
+    $("#" + dots[curr]).css("opacity", 1);
+    $("#" + dots[trail1]).css("opacity", .75);
+    $("#" + dots[trail2]).css("opacity", .5);
+    $("#" + dots[trail3]).css("opacity", .25);
+    // increment currentDot
+    currentDot = adjustIndex( currentDot += 1 );
+}    
 });
