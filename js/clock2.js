@@ -1,25 +1,24 @@
 $(document).ready(function () {
     'use strict';
     
-    var running = false,// prevents button press by monitoring run status
-        newPomMin,  // placeholder for new selected value
-        newBrkMin,  // placeholder for new selected value
-        workTimeMin,    // received selected time from DOM to start counter
-        workTimeSec,    // calculated from workTimeMin
-        breakTimeMin,   // received selected time from DOM to start breakCounter
-        breakTimeSec,   // calculated from breakTimeMin
-        dispMin,    // minute values to be pushed to DOM
-        dispSec,    // second values to be pushed to DOM
-        countdownId,    //  handle for setInterval
+    // DECLARE GLOBAL VARIABLES
+    var running = false,        // prevents button press by monitoring run status
+        newPomMin,              // placeholder for new selected value
+        newBrkMin,              // placeholder for new selected value
+        workTimeMin,            // received selected time from DOM to start counter
+        workTimeSec,            // calculated from workTimeMin
+        breakTimeMin,           // received selected time from DOM to start breakCounter
+        breakTimeSec,           // calculated from breakTimeMin
+        dispMin,                // minute values to be pushed to DOM
+        dispSec,                // second values to be pushed to DOM
+        countdownId,            //  handle for clock setInterval
+        animation,              //  handle for animation setInterval
         whichClock = "work",    // change to "break" when break clock is running
+        dots = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"],
+        currentDot = 11,        // adjusted for zero index, represents dot twelve
         alarm = new Audio('audio/Siren_Noise.mp3');
-    
-    // ANIMATION VARIABLES
-    var dots = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"],
-        currentDot = 11, // adjusted for zero index, represents dot twelve
-        animation;
-    
 
+    // WORK CLOCK INTERVAL FUNCTION
     function counter() {
         workTimeSec -= 1;
         dispMin = Math.floor(workTimeSec / 60);
@@ -27,20 +26,15 @@ $(document).ready(function () {
         $('#minutes').html(dispMin);
         $('#seconds').html((dispSec < 10 ? '0' : '') + dispSec);    // add leading 0 to seconds
         if (workTimeSec === 0) {
-            console.log("Time's Up!");
             // alarm.play();
             clearInterval(countdownId);
             workTimeMin = null;
             // SWITCH TO BREAK CLOCK
-            // Break clock appearance
+            // Change appearance
             $('#title').html("BREAK TIME!");
-            
             $('body').css('background', '#ED4337');
-            $('.circle-two').css('background', '#ED4337');
-            
             $('body').css('color', 'gold');
             $('.clock').css('color', 'gold');
-            $('.circle-one').css('background', 'gold');
             
             // Break clock function
             if (breakTimeMin === undefined || breakTimeMin === null) {
@@ -52,6 +46,7 @@ $(document).ready(function () {
         }
     }
     
+    // BREAK CLOCK INTERVAL FUNCTION
     function breakCounter() {
         breakTimeSec -= 1;
         dispMin = Math.floor(breakTimeSec / 60);
@@ -59,20 +54,15 @@ $(document).ready(function () {
         $('#minutes').html(dispMin);
         $('#seconds').html((dispSec < 10 ? '0' : '') + dispSec);    // add leading 0 to seconds
         if (breakTimeSec === 0) {
-            console.log("Time's Up!");
             // alarm.play();
             clearInterval(countdownId);
             breakTimeMin = null;
             // SWITCH TO POMODORO CLOCK
-            // Pom clock appearance
+            // Change appearance
             $('#title').html("POMODORO TIMER");
-            
             $('body').css('background', '#889');
-            $('.circle-two').css('background', '#889');
-            
             $('body').css('color', 'silver');
             $('.clock').css('color', 'silver');
-            $('.circle-one').css('background', 'silver');
 
             // Pom clock function
             if (workTimeMin === undefined || workTimeMin === null) {
@@ -93,6 +83,7 @@ $(document).ready(function () {
         return index;
     }
 
+    // CONTROLS ROTATING ANIMATION
     function rotateDots() {
         // keep variables within range
         var curr = currentDot,
@@ -110,6 +101,10 @@ $(document).ready(function () {
         currentDot = adjustIndex( currentDot += 1 );
     }      
 
+    /*
+    *               CLICK FUNCTIONS
+    */
+    
     // START THE TIMER
     $('#start').on('click', function() {
         animation = setInterval(rotateDots, 83.333); // Starts animation. 1000 miliesconds divided by 12
@@ -128,15 +123,6 @@ $(document).ready(function () {
             countdownId = setInterval(breakCounter, 1000);
             running = true;
         }
-
-
-        // check second hand state, start or resume animation
-//        if ($('#hand').hasClass('hand-stopped')) {
-//            $('#hand').removeClass('hand-stopped');
-//        } else if ($('#hand').hasClass('hand-paused')) {
-//            $('#hand').removeClass('hand-paused');
-//        }
-
         // Change buttons displayed
         start.style.display = "none";
         pause.style.display = "inline";
@@ -148,7 +134,6 @@ $(document).ready(function () {
         clearInterval(countdownId);
         clearInterval(animation);
         currentDot = 11;
-//        $('#hand').addClass('hand-paused');
 
         // Change buttons displayed
         start.style.display = "inline";
@@ -159,7 +144,7 @@ $(document).ready(function () {
     // RESET THE TIMER
     $('#reset').on('click', function() {
         clearInterval(animation);
-        $(".inner-dot").css("opacity", 1);
+        $(".inner-dot").css("opacity", 0);
         if (whichClock === "work") {
             workTimeSec = workTimeMin * 60
             dispMin = Math.floor(workTimeSec / 60);

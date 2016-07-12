@@ -79,7 +79,7 @@ body {
     height: 15px;
     border-radius: 50%;
     background-color: white;
-    transform-style: flat;
+    opacity: 0;
 }
 
 #one { transform: translateY(-7.5px) rotate(-60deg) translateX(290px); }
@@ -96,9 +96,6 @@ body {
 #twelve { transform: translateY(-7.5px) rotate(-90deg) translateX(290px); }
 
 
-
-
-
 /*  BUTTONS DISPLAY - only #start on load, then controled by JS */
 #start {
     display: inline;
@@ -112,34 +109,6 @@ body {
     display: none;
 }
 
-/* ANIMATION : .second-hand ROTATE */
-/*
-@-webkit-keyframes rotate {
-    0% { -webkit-transform: rotate(0deg);}
-    100% { -webkit-transform: rotate(360deg);}
-} 
-
-@-moz-keyframes rotate {
-
-    0% { -moz-transform: rotate(0deg);} 
-    100% { -moz-transform: rotate(360deg);}
-} 
-
-@-ms-keyframes rotate {
-    0% { -ms-transform: rotate(0deg);}
-    100% { -ms-transform: rotate(360deg);}
-} 
-
-@-o-keyframes rotate {
-    0% { -o-transform: rotate(0deg);}
-    100% { -o-transform: rotate(360deg);}
-} 
-
-@keyframes rotate {
-    0% { transform: rotate(0deg);}
-    100% { transform: rotate(360deg);}
-} 
-*/
 
 
 /* MEDIA QUERIES - RESPONSIVE SIZING */
