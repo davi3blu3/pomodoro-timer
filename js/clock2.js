@@ -1,7 +1,10 @@
 $(document).ready(function () {
     'use strict';
     
-    // DECLARE GLOBAL VARIABLES
+    /*
+    *   1. GLOBAL VARIABLES
+    */ 
+    
     var running = false,        // prevents button press by monitoring run status
         newPomMin,              // placeholder for new selected value
         newBrkMin,              // placeholder for new selected value
@@ -15,9 +18,13 @@ $(document).ready(function () {
         animation,              //  handle for animation setInterval
         whichClock = "work",    // change to "break" when break clock is running
         dots = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"],
-        currentDot = 11,        // adjusted for zero index, represents dot twelve
+        currentDot = 2,        // starting dot, adjusted for zero index
         alarm = new Audio('audio/Siren_Noise.mp3');
 
+    /*
+    *   2. INTERVAL FUNCTIONS
+    */    
+    
     // WORK CLOCK INTERVAL FUNCTION
     function counter() {
         workTimeSec -= 1;
@@ -74,7 +81,7 @@ $(document).ready(function () {
         }
     }
 
-    // insures number is within 0 - 11 range
+    // Helper function to rotateDots, insures number is within 0 - 11 range
     function adjustIndex(index) {
         // if index is > 11, subtract 12
         if ( index > 11 ){ index -= 12; };
@@ -102,7 +109,7 @@ $(document).ready(function () {
     }      
 
     /*
-    *               CLICK FUNCTIONS
+    *   3. CLICK EVENT FUNCTIONS
     */
     
     // START THE TIMER
@@ -133,7 +140,6 @@ $(document).ready(function () {
     $('#pause').on('click', function() {
         clearInterval(countdownId);
         clearInterval(animation);
-        currentDot = 11;
 
         // Change buttons displayed
         start.style.display = "inline";
@@ -145,6 +151,7 @@ $(document).ready(function () {
     $('#reset').on('click', function() {
         clearInterval(animation);
         $(".inner-dot").css("opacity", 0);
+        currentDot = 2;
         if (whichClock === "work") {
             workTimeSec = workTimeMin * 60
             dispMin = Math.floor(workTimeSec / 60);
