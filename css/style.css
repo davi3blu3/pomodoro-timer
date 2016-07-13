@@ -68,8 +68,21 @@ body {
 }
 
 
-/* ROTATING SECONDS ANIMATION */
+/*  BUTTONS DISPLAY - only #start on load, then controled by JS */
+#start {
+    display: inline;
+}
 
+#reset {
+    display: none;
+}
+
+#pause {
+    display: none;
+}
+
+
+/* ROTATING SECONDS ANIMATION */
 .inner-dot {
     position: absolute;
     margin: 0 auto;
@@ -95,19 +108,6 @@ body {
 #eleven { transform: translateY(-7.5px) rotate(240deg) translateX(290px); }
 #twelve { transform: translateY(-7.5px) rotate(-90deg) translateX(290px); }
 
-
-/*  BUTTONS DISPLAY - only #start on load, then controled by JS */
-#start {
-    display: inline;
-}
-
-#reset {
-    display: none;
-}
-
-#pause {
-    display: none;
-}
 
 
 
