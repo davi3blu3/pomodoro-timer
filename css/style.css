@@ -1,5 +1,5 @@
 /*  COLORS
-*   Work clock  background  #889
+*   Work clock  background  #000099
 *               highlight   silver
 *
 *   Break clock background  red
@@ -8,7 +8,7 @@
 
 body {
     margin: 0;
-    background: #889;
+    background: #0000cc;
     text-align: center;
     color: silver;
     font-family: Verdana;
