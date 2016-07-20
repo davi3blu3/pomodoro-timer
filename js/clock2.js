@@ -67,7 +67,7 @@ $(document).ready(function () {
             // SWITCH TO POMODORO CLOCK
             // Change appearance
             $('#title').html("POMODORO TIMER");
-            $('body').css('background', '#889');
+            $('body').css('background', '#0000cc');
             $('body').css('color', 'silver');
             $('.clock').css('color', 'silver');
 

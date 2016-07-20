@@ -1,11 +1,3 @@
-/*  COLORS
-*   Work clock  background  #000099
-*               highlight   silver
-*
-*   Break clock background  red
-*               highlight   ?
-*/
-
 body {
     margin: 0;
     background: #0000cc;
@@ -114,7 +106,7 @@ body {
 /* MEDIA QUERIES - RESPONSIVE SIZING */
 
 /* Custom, iPhone Retina */ 
-@media only screen and (min-width : 0px) {
+@media only screen and (min-width : 320px) {
     #container {
         width: 90%;
     }
