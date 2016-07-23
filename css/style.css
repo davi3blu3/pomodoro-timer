@@ -16,8 +16,6 @@ body {
 
 .circle {
     margin: 0 auto;
-    width: 600px;
-    height: 600px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -111,6 +109,11 @@ body {
         width: 90%;
     }
 
+    .circle {
+        width: 300px;
+        height: 300px;
+    }
+
     .timez {
         font-size: .8em;
     }
@@ -137,6 +140,11 @@ body {
 @media only screen and (min-width : 480px) {
     #container {
         width: 80%;
+    }
+
+    .circle {
+        width: 400px;
+        height: 400px;
     }
 
      .timez {
@@ -166,6 +174,11 @@ body {
         width: 70%;
     }
 
+    .circle {
+        width: 600px;
+        height: 600px;
+    }
+
     .timez {
         font-size: 1.2em;
     }
@@ -191,7 +204,12 @@ body {
 @media only screen and (min-width : 992px) {
     #container {
         width: 60%;
-    }  
+    }
+
+    .circle {
+        width: 800px;
+        height: 800px;
+    }
 
     .timez {
         font-size: 1.4em;
