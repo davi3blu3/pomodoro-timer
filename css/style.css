@@ -85,20 +85,6 @@ body {
     opacity: 0;
 }
 
-#one { transform: translateY(-7.5px) rotate(-60deg) translateX(290px); }
-#two { transform: translateY(-7.5px) rotate(-30deg) translateX(290px); }
-#three { transform: translateY(-7.5px) rotate(0deg) translateX(290px); }
-#four { transform: translateY(-7.5px) rotate(30deg) translateX(290px); }
-#five { transform: translateY(-7.5px) rotate(60deg) translateX(290px); }
-#six { transform: translateY(-7.5px) rotate(90deg) translateX(290px); }
-#seven { transform: translateY(-7.5px) rotate(120deg) translateX(290px); }
-#eight { transform: translateY(-7.5px) rotate(150deg) translateX(290px); }
-#nine { transform: translateY(-7.5px) rotate(180deg) translateX(290px); }
-#ten { transform: translateY(-7.5px) rotate(210deg) translateX(290px); }
-#eleven { transform: translateY(-7.5px) rotate(240deg) translateX(290px); }
-#twelve { transform: translateY(-7.5px) rotate(-90deg) translateX(290px); }
-
-
 
 
 /* MEDIA QUERIES - RESPONSIVE SIZING */
@@ -132,7 +118,20 @@ body {
     
     .clock, .fa {
         font-size: 1.8em;
-    }    
+    }
+
+    #one { transform: translateY(-7.5px) rotate(-60deg) translateX(140px); }
+    #two { transform: translateY(-7.5px) rotate(-30deg) translateX(140px); }
+    #three { transform: translateY(-7.5px) rotate(0deg) translateX(140px); }
+    #four { transform: translateY(-7.5px) rotate(30deg) translateX(140px); }
+    #five { transform: translateY(-7.5px) rotate(60deg) translateX(140px); }
+    #six { transform: translateY(-7.5px) rotate(90deg) translateX(140px); }
+    #seven { transform: translateY(-7.5px) rotate(120deg) translateX(140px); }
+    #eight { transform: translateY(-7.5px) rotate(150deg) translateX(140px); }
+    #nine { transform: translateY(-7.5px) rotate(180deg) translateX(140px); }
+    #ten { transform: translateY(-7.5px) rotate(210deg) translateX(140px); }
+    #eleven { transform: translateY(-7.5px) rotate(240deg) translateX(140px); }
+    #twelve { transform: translateY(-7.5px) rotate(-90deg) translateX(140px); }
 }
 
 /* Extra Small Devices, Phones */ 
@@ -164,7 +163,20 @@ body {
     
     .clock, .fa {
         font-size: 2.5em;
-    }  
+    }
+
+    #one { transform: translateY(-7.5px) rotate(-60deg) translateX(190px); }
+    #two { transform: translateY(-7.5px) rotate(-30deg) translateX(190px); }
+    #three { transform: translateY(-7.5px) rotate(0deg) translateX(190px); }
+    #four { transform: translateY(-7.5px) rotate(30deg) translateX(190px); }
+    #five { transform: translateY(-7.5px) rotate(60deg) translateX(190px); }
+    #six { transform: translateY(-7.5px) rotate(90deg) translateX(190px); }
+    #seven { transform: translateY(-7.5px) rotate(120deg) translateX(190px); }
+    #eight { transform: translateY(-7.5px) rotate(150deg) translateX(190px); }
+    #nine { transform: translateY(-7.5px) rotate(180deg) translateX(190px); }
+    #ten { transform: translateY(-7.5px) rotate(210deg) translateX(190px); }
+    #eleven { transform: translateY(-7.5px) rotate(240deg) translateX(190px); }
+    #twelve { transform: translateY(-7.5px) rotate(-90deg) translateX(190px); }    
 }
 
 /* Small Devices, Tablets */
@@ -196,7 +208,20 @@ body {
     
     .clock, .fa {
         font-size: 4em;
-    }    
+    }
+
+    #one { transform: translateY(-7.5px) rotate(-60deg) translateX(290px); }
+    #two { transform: translateY(-7.5px) rotate(-30deg) translateX(290px); }
+    #three { transform: translateY(-7.5px) rotate(0deg) translateX(290px); }
+    #four { transform: translateY(-7.5px) rotate(30deg) translateX(290px); }
+    #five { transform: translateY(-7.5px) rotate(60deg) translateX(290px); }
+    #six { transform: translateY(-7.5px) rotate(90deg) translateX(290px); }
+    #seven { transform: translateY(-7.5px) rotate(120deg) translateX(290px); }
+    #eight { transform: translateY(-7.5px) rotate(150deg) translateX(290px); }
+    #nine { transform: translateY(-7.5px) rotate(180deg) translateX(290px); }
+    #ten { transform: translateY(-7.5px) rotate(210deg) translateX(290px); }
+    #eleven { transform: translateY(-7.5px) rotate(240deg) translateX(290px); }
+    #twelve { transform: translateY(-7.5px) rotate(-90deg) translateX(290px); }    
 }
 
 /* Medium Devices, Desktops */
@@ -225,7 +250,20 @@ body {
     
     .clock, .fa {
         font-size: 4.5em;
-    }      
+    }
+
+    #one { transform: translateY(-7.5px) rotate(-60deg) translateX(390px); }
+    #two { transform: translateY(-7.5px) rotate(-30deg) translateX(390px); }
+    #three { transform: translateY(-7.5px) rotate(0deg) translateX(390px); }
+    #four { transform: translateY(-7.5px) rotate(30deg) translateX(390px); }
+    #five { transform: translateY(-7.5px) rotate(60deg) translateX(390px); }
+    #six { transform: translateY(-7.5px) rotate(90deg) translateX(390px); }
+    #seven { transform: translateY(-7.5px) rotate(120deg) translateX(390px); }
+    #eight { transform: translateY(-7.5px) rotate(150deg) translateX(390px); }
+    #nine { transform: translateY(-7.5px) rotate(180deg) translateX(390px); }
+    #ten { transform: translateY(-7.5px) rotate(210deg) translateX(390px); }
+    #eleven { transform: translateY(-7.5px) rotate(240deg) translateX(390px); }
+    #twelve { transform: translateY(-7.5px) rotate(-90deg) translateX(390px); }
 }
 
 /* Large Devices, Wide Screens */
