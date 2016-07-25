@@ -133,18 +133,78 @@ body {
     }
 
 
-    #one { transform: rotate(-60deg) translateX(145px); }
-    #two { transform: rotate(-30deg) translateX(145px); }
-    #three { transform: rotate(0deg) translateX(145px); }
-    #four { transform: rotate(30deg) translateX(145px); }
-    #five { transform: rotate(60deg) translateX(145px); }
-    #six { transform: rotate(90deg) translateX(145px); }
-    #seven { transform: rotate(120deg) translateX(145px); }
-    #eight { transform: rotate(150deg) translateX(145px); }
-    #nine { transform: rotate(180deg) translateX(145px); }
-    #ten { transform: rotate(210deg) translateX(145px); }
-    #eleven { transform: rotate(240deg) translateX(145px); }
-    #twelve { transform: rotate(-90deg) translateX(145px); }
+    #one {
+        -webkit-transform: rotate(-60deg) translateX(145px);
+            -ms-transform: rotate(-60deg) translateX(145px);
+                transform: rotate(-60deg) translateX(145px);
+    }
+    
+    #two {
+        -webkit-transform: rotate(-30deg) translateX(145px);
+            -ms-transform: rotate(-30deg) translateX(145px);
+                transform: rotate(-30deg) translateX(145px);
+    }
+    
+    #three {
+        -webkit-transform: rotate(0deg) translateX(145px);
+            -ms-transform: rotate(0deg) translateX(145px);
+                transform: rotate(0deg) translateX(145px);
+    }
+    
+    #four {
+        -webkit-transform: rotate(30deg) translateX(145px);
+            -ms-transform: rotate(30deg) translateX(145px);
+                transform: rotate(30deg) translateX(145px);
+    }
+    
+    #five {
+        -webkit-transform: rotate(60deg) translateX(145px);
+            -ms-transform: rotate(60deg) translateX(145px);
+                transform: rotate(60deg) translateX(145px);
+    }
+    
+    #six {
+        -webkit-transform: rotate(90deg) translateX(145px);
+            -ms-transform: rotate(90deg) translateX(145px);
+                transform: rotate(90deg) translateX(145px);
+    }
+    
+    #seven {
+        -webkit-transform: rotate(120deg) translateX(145px);
+            -ms-transform: rotate(120deg) translateX(145px);
+                transform: rotate(120deg) translateX(145px);
+    }
+    
+    #eight {
+        -webkit-transform: rotate(150deg) translateX(145px);
+            -ms-transform: rotate(150deg) translateX(145px);
+                transform: rotate(150deg) translateX(145px);
+    }
+    
+    #nine {
+        -webkit-transform: rotate(180deg) translateX(145px);
+            -ms-transform: rotate(180deg) translateX(145px);
+                transform: rotate(180deg) translateX(145px);
+    }
+    
+    #ten {
+        -webkit-transform: rotate(210deg) translateX(145px);
+            -ms-transform: rotate(210deg) translateX(145px);
+                transform: rotate(210deg) translateX(145px);
+    }
+    
+    #eleven {
+        -webkit-transform: rotate(240deg) translateX(145px);
+            -ms-transform: rotate(240deg) translateX(145px);
+                transform: rotate(240deg) translateX(145px);
+    }
+    
+    #twelve {
+        -webkit-transform: rotate(-90deg) translateX(145px);
+            -ms-transform: rotate(-90deg) translateX(145px);
+                transform: rotate(-90deg) translateX(145px);
+    }
+    
 }
 
 /* Extra Small Devices, Phones */ 
@@ -185,18 +245,78 @@ body {
         margin-top: -5px;     
     }
 
-    #one { transform: rotate(-60deg) translateX(190px); }
-    #two { transform: rotate(-30deg) translateX(190px); }
-    #three { transform: rotate(0deg) translateX(190px); }
-    #four { transform: rotate(30deg) translateX(190px); }
-    #five { transform: rotate(60deg) translateX(190px); }
-    #six { transform: rotate(90deg) translateX(190px); }
-    #seven { transform: rotate(120deg) translateX(190px); }
-    #eight { transform: rotate(150deg) translateX(190px); }
-    #nine { transform: rotate(180deg) translateX(190px); }
-    #ten { transform: rotate(210deg) translateX(190px); }
-    #eleven { transform: rotate(240deg) translateX(190px); }
-    #twelve { transform: rotate(-90deg) translateX(190px); }
+    #one {
+        -webkit-transform: rotate(-60deg) translateX(190px);
+            -ms-transform: rotate(-60deg) translateX(190px);
+                transform: rotate(-60deg) translateX(190px);
+    }
+    
+    #two {
+        -webkit-transform: rotate(-30deg) translateX(190px);
+            -ms-transform: rotate(-30deg) translateX(190px);
+                transform: rotate(-30deg) translateX(190px);
+    }
+    
+    #three {
+        -webkit-transform: rotate(0deg) translateX(190px);
+            -ms-transform: rotate(0deg) translateX(190px);
+                transform: rotate(0deg) translateX(190px);
+    }
+    
+    #four {
+        -webkit-transform: rotate(30deg) translateX(190px);
+            -ms-transform: rotate(30deg) translateX(190px);
+                transform: rotate(30deg) translateX(190px);
+    }
+    
+    #five {
+        -webkit-transform: rotate(60deg) translateX(190px);
+            -ms-transform: rotate(60deg) translateX(190px);
+                transform: rotate(60deg) translateX(190px);
+    }
+    
+    #six {
+        -webkit-transform: rotate(90deg) translateX(190px);
+            -ms-transform: rotate(90deg) translateX(190px);
+                transform: rotate(90deg) translateX(190px);
+    }
+    
+    #seven {
+        -webkit-transform: rotate(120deg) translateX(190px);
+            -ms-transform: rotate(120deg) translateX(190px);
+                transform: rotate(120deg) translateX(190px);
+    }
+    
+    #eight {
+        -webkit-transform: rotate(150deg) translateX(190px);
+            -ms-transform: rotate(150deg) translateX(190px);
+                transform: rotate(150deg) translateX(190px);
+    }
+    
+    #nine {
+        -webkit-transform: rotate(180deg) translateX(190px);
+            -ms-transform: rotate(180deg) translateX(190px);
+                transform: rotate(180deg) translateX(190px);
+    }
+    
+    #ten {
+        -webkit-transform: rotate(210deg) translateX(190px);
+            -ms-transform: rotate(210deg) translateX(190px);
+                transform: rotate(210deg) translateX(190px);
+    }
+    
+    #eleven {
+        -webkit-transform: rotate(240deg) translateX(190px);
+            -ms-transform: rotate(240deg) translateX(190px);
+                transform: rotate(240deg) translateX(190px);
+    }
+    
+    #twelve {
+        -webkit-transform: rotate(-90deg) translateX(190px);
+            -ms-transform: rotate(-90deg) translateX(190px);
+                transform: rotate(-90deg) translateX(190px);
+    }
+    
 }
 
 /* Small Devices, Tablets */
@@ -237,18 +357,79 @@ body {
         margin-top: -6px;     
     }
 
-    #one { transform: rotate(-60deg) translateX(290px); }
-    #two { transform: rotate(-30deg) translateX(290px); }
-    #three { transform: rotate(0deg) translateX(290px); }
-    #four { transform: rotate(30deg) translateX(290px); }
-    #five { transform: rotate(60deg) translateX(290px); }
-    #six { transform: rotate(90deg) translateX(290px); }
-    #seven { transform: rotate(120deg) translateX(290px); }
-    #eight { transform: rotate(150deg) translateX(290px); }
-    #nine { transform: rotate(180deg) translateX(290px); }
-    #ten { transform: rotate(210deg) translateX(290px); }
-    #eleven { transform: rotate(240deg) translateX(290px); }
-    #twelve { transform: rotate(-90deg) translateX(290px); }    
+    #one {
+        -webkit-transform: rotate(-60deg) translateX(290px);
+            -ms-transform: rotate(-60deg) translateX(290px);
+                transform: rotate(-60deg) translateX(290px);
+    }
+    
+    #two {
+        -webkit-transform: rotate(-30deg) translateX(290px);
+            -ms-transform: rotate(-30deg) translateX(290px);
+                transform: rotate(-30deg) translateX(290px);
+    }
+    
+    #three {
+        -webkit-transform: rotate(0deg) translateX(290px);
+            -ms-transform: rotate(0deg) translateX(290px);
+                transform: rotate(0deg) translateX(290px);
+    }
+    
+    #four {
+        -webkit-transform: rotate(30deg) translateX(290px);
+            -ms-transform: rotate(30deg) translateX(290px);
+                transform: rotate(30deg) translateX(290px);
+    }
+    
+    #five {
+        -webkit-transform: rotate(60deg) translateX(290px);
+            -ms-transform: rotate(60deg) translateX(290px);
+                transform: rotate(60deg) translateX(290px);
+    }
+    
+    #six {
+        -webkit-transform: rotate(90deg) translateX(290px);
+            -ms-transform: rotate(90deg) translateX(290px);
+                transform: rotate(90deg) translateX(290px);
+    }
+    
+    #seven {
+        -webkit-transform: rotate(120deg) translateX(290px);
+            -ms-transform: rotate(120deg) translateX(290px);
+                transform: rotate(120deg) translateX(290px);
+    }
+    
+    #eight {
+        -webkit-transform: rotate(150deg) translateX(290px);
+            -ms-transform: rotate(150deg) translateX(290px);
+                transform: rotate(150deg) translateX(290px);
+    }
+    
+    #nine {
+        -webkit-transform: rotate(180deg) translateX(290px);
+            -ms-transform: rotate(180deg) translateX(290px);
+                transform: rotate(180deg) translateX(290px);
+    }
+    
+    #ten {
+        -webkit-transform: rotate(210deg) translateX(290px);
+            -ms-transform: rotate(210deg) translateX(290px);
+                transform: rotate(210deg) translateX(290px);
+    }
+    
+    #eleven {
+        -webkit-transform: rotate(240deg) translateX(290px);
+            -ms-transform: rotate(240deg) translateX(290px);
+                transform: rotate(240deg) translateX(290px);
+    }
+    
+    #twelve {
+        -webkit-transform: rotate(-90deg) translateX(290px); 
+            -ms-transform: rotate(-90deg) translateX(290px);  
+                transform: rotate(-90deg) translateX(290px);
+    }
+    
+
 }
 
 /* Medium Devices, Desktops */
@@ -286,18 +467,78 @@ body {
         margin-top: -7.5px;     
     }
 
-    #one { transform: rotate(-60deg) translateX(390px); }
-    #two { transform: rotate(-30deg) translateX(390px); }
-    #three { transform: rotate(0deg) translateX(390px); }
-    #four { transform: rotate(30deg) translateX(390px); }
-    #five { transform: rotate(60deg) translateX(390px); }
-    #six { transform: rotate(90deg) translateX(390px); }
-    #seven { transform: rotate(120deg) translateX(390px); }
-    #eight { transform: rotate(150deg) translateX(390px); }
-    #nine { transform: rotate(180deg) translateX(390px); }
-    #ten { transform: rotate(210deg) translateX(390px); }
-    #eleven { transform: rotate(240deg) translateX(390px); }
-    #twelve { transform: rotate(-90deg) translateX(390px); }
+    #one {
+        -webkit-transform: rotate(-60deg) translateX(390px);
+            -ms-transform: rotate(-60deg) translateX(390px);
+                transform: rotate(-60deg) translateX(390px);
+    }
+    
+    #two {
+        -webkit-transform: rotate(-30deg) translateX(390px);
+            -ms-transform: rotate(-30deg) translateX(390px);
+                transform: rotate(-30deg) translateX(390px);
+    }
+    
+    #three {
+        -webkit-transform: rotate(0deg) translateX(390px);
+            -ms-transform: rotate(0deg) translateX(390px);
+                transform: rotate(0deg) translateX(390px);
+    }
+    
+    #four {
+        -webkit-transform: rotate(30deg) translateX(390px);
+            -ms-transform: rotate(30deg) translateX(390px);
+                transform: rotate(30deg) translateX(390px);
+    }
+    
+    #five {
+        -webkit-transform: rotate(60deg) translateX(390px);
+            -ms-transform: rotate(60deg) translateX(390px);
+                transform: rotate(60deg) translateX(390px);
+    }
+    
+    #six {
+        -webkit-transform: rotate(90deg) translateX(390px);
+            -ms-transform: rotate(90deg) translateX(390px);
+                transform: rotate(90deg) translateX(390px);
+    }
+    
+    #seven {
+        -webkit-transform: rotate(120deg) translateX(390px);
+            -ms-transform: rotate(120deg) translateX(390px);
+                transform: rotate(120deg) translateX(390px);
+    }
+    
+    #eight {
+        -webkit-transform: rotate(150deg) translateX(390px);
+            -ms-transform: rotate(150deg) translateX(390px);
+                transform: rotate(150deg) translateX(390px);
+    }
+    
+    #nine {
+        -webkit-transform: rotate(180deg) translateX(390px);
+            -ms-transform: rotate(180deg) translateX(390px);
+                transform: rotate(180deg) translateX(390px);
+    }
+    
+    #ten {
+        -webkit-transform: rotate(210deg) translateX(390px);
+            -ms-transform: rotate(210deg) translateX(390px);
+                transform: rotate(210deg) translateX(390px);
+    }
+    
+    #eleven {
+        -webkit-transform: rotate(240deg) translateX(390px);
+            -ms-transform: rotate(240deg) translateX(390px);
+                transform: rotate(240deg) translateX(390px);
+    }
+    
+    #twelve {
+        -webkit-transform: rotate(-90deg) translateX(390px);
+            -ms-transform: rotate(-90deg) translateX(390px);
+                transform: rotate(-90deg) translateX(390px);
+    }
+    
 }
 
 /* Large Devices, Wide Screens */
