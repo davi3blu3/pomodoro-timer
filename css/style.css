@@ -36,7 +36,8 @@ body {
 }
 
 .clock-face {
-    position: relative;  
+    position: relative;
+    margin: auto;
 }
 
 .clock-face-row {
